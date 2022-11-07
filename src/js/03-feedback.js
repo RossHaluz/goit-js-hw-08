@@ -14,7 +14,7 @@ function onInputForm(evt) {
 function getText(evt) {
     const saveText = JSON.parse(localStorage.getItem("feedback-form-state"))
 
-   if (saveText === null) {
+   if (!saveText) {
     return;
   }
   form.message.value = saveText.message || '';
