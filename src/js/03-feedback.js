@@ -14,10 +14,11 @@ function onInputForm(evt) {
 function getText(evt) {
     const saveText = JSON.parse(localStorage.getItem("feedback-form-state"))
 
-    if (saveText) {
-        form.email.value = saveText.email
-        form.message.value = saveText.message
-    }
+   if (saveText === null) {
+    return;
+  }
+  form.message.value = saveText.message || '';
+  form.email.value = saveText.email || '';
 
 }
 
