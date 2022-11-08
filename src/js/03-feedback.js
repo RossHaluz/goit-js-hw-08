@@ -18,8 +18,8 @@ function getText(evt) {
    if (!saveText) {
     return;
   }
-  form.elements.message.value = saveText.message || '';
- form.elements.email.value = saveText.email || '';
+form.elements.message.value = saveText.message || '';
+form.elements.email.value = saveText.email || '';
 
 }
 
