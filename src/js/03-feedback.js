@@ -1,7 +1,6 @@
 import throttle from 'lodash.throttle';
 
 const form = document.querySelector('.feedback-form');
-    console.dir(form)
 
 form.addEventListener('input', throttle(onInputForm, 500))
 getText()
@@ -18,8 +17,8 @@ function getText(evt) {
    if (!saveText) {
     return;
   }
-form.elements.message.value = saveText.message || '';
-form.elements.email.value = saveText.email || '';
+    form.elements.email.value = saveText.email || '';
+    form.elements.message.value = saveText.message || '';
 
 }
 
