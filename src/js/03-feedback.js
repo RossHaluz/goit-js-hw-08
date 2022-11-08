@@ -6,7 +6,7 @@ inputMail: document.querySelector('.feedback-form input'),
 inputMessage: document.querySelector('.feedback-form textarea'),
 }
 
-refs.form.addEventListener('input', onInputForm);
+refs.form.addEventListener('input', throttle(onInputForm, 500));
 refs.form.addEventListener('submit', onFormSubmit)
 getTextInForm()
 
